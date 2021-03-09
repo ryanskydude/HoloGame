@@ -46,3 +46,27 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+*.meta
+Plugins/GitHub/Editor/AsyncBridge.Net35.dll
+Plugins/GitHub/Editor/big-logo@2x.png
+Plugins/GitHub/Editor/eula.txt
+Plugins/GitHub/Editor/credits.txt
+Plugins/GitHub/Editor/GitHub.Api.45.dll
+Plugins/GitHub/Editor/GitHub.Logging.dll
+Plugins/GitHub/Editor/GitHub.Unity.dll
+Plugins/GitHub/Editor/libsfw.bundle
+Plugins/GitHub/Editor/libsfw.so
+Plugins/GitHub/Editor/QuickGuide.pdf
+Plugins/GitHub/Editor/ExtensionLoader.cs
+Plugins/GitHub/Editor/GitHub.Api.dll
+Plugins/GitHub/Editor/GitHub.UnityShim.dll
+Plugins/GitHub/Editor/GitHub.Unity.45.dll
+Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll
+Plugins/GitHub/Editor/Mono.Posix.dll
+Plugins/GitHub/Editor/System.Threading.dll
+Plugins/GitHub/Editor/sfw.net.dll
+Plugins/GitHub/Editor/UnityAPIWrapper.cs
+Plugins/GitHub/Editor/x64/pthreadVC2.dll
+Plugins/GitHub/Editor/x64/sfw_x64.dll
+Plugins/GitHub/Editor/x86/pthreadVC2.dll
+Plugins/GitHub/Editor/x86/sfw_x86.dll
