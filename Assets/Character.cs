@@ -12,7 +12,7 @@ public class StatsContainer
         valueList = new List<ValueReference>();
     }
 
-    public void Sum(Value v, int Sum)
+    public void Sum(Value v, int sum)
     {
         int i = valueList.FindIndex(x => x.valueBase == v);
         if (i != -1)
@@ -26,7 +26,7 @@ public class StatsContainer
         }
     }
 
-    public void Sum(Value v, float Sum)
+    public void Sum(Value v, float sum)
     {
         int i = valueList.FindIndex(x => x.valueBase == v);
         if (i != -1)
