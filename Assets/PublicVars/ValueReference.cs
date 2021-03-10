@@ -6,6 +6,10 @@ using UnityEngine;
 public class ValueReference
 {
     public Value valueBase;
+
+    public Action onChange;
+
+    public virtual string TEXT { get; internal set; }
 }
 
 public class ValueFloatReference : ValueReference
@@ -21,6 +25,15 @@ public class ValueFloatReference : ValueReference
     internal void Sum(float sum)
     {
         value += sum;
+        onChange();
+    }
+
+    public override string TEXT
+    {
+        get
+        {
+            return valueBase.Name + " " + value.ToString();
+        }
     }
 }
 
@@ -39,5 +52,14 @@ public class ValueIntReference : ValueReference
     internal void Sum(int sum)
     {
         value += sum;
+        onChange();
+    }
+
+    public override string TEXT
+    {
+        get
+        {
+            return valueBase.Name + " " + value.ToString();
+        }
     }
 }

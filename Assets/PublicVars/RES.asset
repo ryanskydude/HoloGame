@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cc6ffadf2ebd1c40a559e03d36b30e3, type: 3}
-  m_Name: AGI
+  m_Script: {fileID: 11500000, guid: b318e10f80683714ea231102cd3b32a0, type: 3}
+  m_Name: RES
   m_EditorClassIdentifier: 
-  Name: Agility
+  Name: Resistance

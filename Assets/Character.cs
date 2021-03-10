@@ -12,6 +12,12 @@ public class StatsContainer
         valueList = new List<ValueReference>();
     }
 
+    internal string GetText(Value trackValue)
+    {
+        int i = valueList.FindIndex(x => x.valueBase == trackValue);
+        return valueList[i].TEXT;
+    }
+
     public void Sum(Value v, int sum)
     {
         int i = valueList.FindIndex(x => x.valueBase == v);
@@ -26,6 +32,11 @@ public class StatsContainer
         }
     }
 
+    internal void Subscribe(Action action, Value trackValue)
+    {
+        int i = valueList.FindIndex(x => x.valueBase == trackValue);
+        valueList[i].onChange += action;
+    }
     public void Sum(Value v, float sum)
     {
         int i = valueList.FindIndex(x => x.valueBase == v);
@@ -52,16 +63,10 @@ public class StatsContainer
 
 
 
-
-
-
-
-  
-
 public class Character : MonoBehaviour
 {
     public ValueStructure statsStructure;
-    StatsContainer statsContainer;
+    public StatsContainer statsContainer;
     
     // Start is called before the first frame update
     void Start()
@@ -84,18 +89,14 @@ public class Character : MonoBehaviour
             }
         }
     }
-    
+
     // Update is called once per frame
+    public Value testReferenceValue;
     void Update()
     {
-        
-    }
-
-    private void OnGUI()
-    {
-        for(int i = 0; i < statsContainer.valueList.Count; i++)
+        if(Input.GetKeyDown(KeyCode.X))
         {
-            GUI.Label(new Rect(10, 10 + 30 * i, 500, 22), statsContainer.valueList[i].valueBase.Name);
+            statsContainer.Sum(testReferenceValue, 1);
         }
     }
 }
